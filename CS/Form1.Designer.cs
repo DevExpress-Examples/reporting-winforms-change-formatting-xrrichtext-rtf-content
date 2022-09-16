@@ -1,4 +1,4 @@
-﻿namespace RepOverrideRtfFormatting
+﻿namespace ReportingXRRichTextFormatSample
 {
     partial class Form1
     {
@@ -34,9 +34,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(50, 50);
+            this.button1.Location = new System.Drawing.Point(111, 75);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 23);
+            this.button1.Size = new System.Drawing.Size(99, 29);
             this.button1.TabIndex = 0;
             this.button1.Text = "Show Report";
             this.button1.UseVisualStyleBackColor = true;
@@ -47,22 +47,23 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(30, 12);
+            this.checkBox1.Location = new System.Drawing.Point(116, 28);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(139, 17);
+            this.checkBox1.Size = new System.Drawing.Size(88, 17);
             this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Override RTF formatting";
+            this.checkBox1.Text = "Process RTF";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(198, 97);
+            this.ClientSize = new System.Drawing.Size(321, 129);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Modify RTF in XRRichText Control";
             this.ResumeLayout(false);
             this.PerformLayout();
 

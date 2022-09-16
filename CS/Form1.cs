@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
 
-namespace RepOverrideRtfFormatting {
+namespace ReportingXRRichTextFormatSample {
     public partial class Form1 : Form {
         private XtraReport1 report = new XtraReport1();
         

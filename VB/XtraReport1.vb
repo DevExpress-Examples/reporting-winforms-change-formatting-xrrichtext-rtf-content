@@ -1,39 +1,38 @@
-Imports Microsoft.VisualBasic
-Imports System.Drawing
+﻿Imports System.Drawing
+Imports DevExpress.XtraReports.UI
 Imports DevExpress.XtraRichEdit
 Imports DevExpress.XtraRichEdit.API.Native
 
-Namespace RepOverrideRtfFormatting
+Namespace ReportingXRRichTextFormatSample
 	Partial Public Class XtraReport1
 		Inherits DevExpress.XtraReports.UI.XtraReport
+
 		Private richEditDocumentServer As RichEditDocumentServer
-		Private privateOverrideRtfFormatting As Boolean
 		Public Property OverrideRtfFormatting() As Boolean
-			Get
-				Return privateOverrideRtfFormatting
-			End Get
-			Set(ByVal value As Boolean)
-				privateOverrideRtfFormatting = value
-			End Set
-		End Property
 
 		Public Sub New()
 			InitializeComponent()
 		End Sub
 
-	   Private Sub XtraReport1_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles MyBase.BeforePrint
+		Private Sub XtraReport1_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles Me.BeforePrint
+			xrRichText1.ExpressionBindings.Clear()
+
 			If OverrideRtfFormatting Then
 				If richEditDocumentServer Is Nothing Then
 					richEditDocumentServer = New RichEditDocumentServer()
 				End If
-				xrRichText1.DataBindings.Clear()
 			Else
-				xrRichText1.DataBindings.Add("Rtf", Nothing, "Cars.RtfContent")
+				xrRichText1.ExpressionBindings.Add(New ExpressionBinding() With {
+					.PropertyName = "Rtf",
+					.Expression = "[RtfContent]",
+					.EventName = "BeforePrint"
+				})
 			End If
-	   End Sub
+
+		End Sub
 
 		Private Sub xrRichText1_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles xrRichText1.BeforePrint
-		   If (Not OverrideRtfFormatting) Then
+		   If Not OverrideRtfFormatting Then
 			   Return
 		   End If
 

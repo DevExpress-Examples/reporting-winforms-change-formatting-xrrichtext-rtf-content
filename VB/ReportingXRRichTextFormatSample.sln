@@ -1,6 +1,8 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RepOverrideRtfFormatting", "RepOverrideRtfFormatting.vbproj", "{236F7BEC-E832-46F8-BC85-FE8489D6C66C}"
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ReportingXRRichTextFormatSample", "ReportingXRRichTextFormatSample.vbproj", "{236F7BEC-E832-46F8-BC85-FE8489D6C66C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,5 +17,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1634B693-DFEE-43BD-832E-D525CA0E9AD7}
 	EndGlobalSection
 EndGlobal

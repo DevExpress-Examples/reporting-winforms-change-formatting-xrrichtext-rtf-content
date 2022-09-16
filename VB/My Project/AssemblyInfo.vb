@@ -1,17 +1,16 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Reflection
+﻿Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information
 ' associated with an assembly.
-<Assembly: AssemblyTitle("RepOverrideRtfFormatting")>
+<Assembly: AssemblyTitle("ReportingXRRichTextFormatSample")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("My Company")>
-<Assembly: AssemblyProduct("RepOverrideRtfFormatting")>
-<Assembly: AssemblyCopyright("Copyright © My Company 2008")>
+<Assembly: AssemblyProduct("ReportingXRRichTextFormatSample")>
+<Assembly: AssemblyCopyright("Copyright © My Company 2022")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RepOverrideRtfFormatting {
+namespace ReportingXRRichTextFormatSample {
     public partial class XtraReport1 {
         private DevExpress.XtraReports.UI.DetailBand Detail;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader0;
@@ -40,8 +40,8 @@ namespace RepOverrideRtfFormatting {
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrPictureBox4 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.dsCars1 = new RepOverrideRtfFormatting.dsCars();
-            this.carsTableAdapter1 = new RepOverrideRtfFormatting.dsCarsTableAdapters.CarsTableAdapter();
+            this.dsCars1 = new ReportingXRRichTextFormatSample.dsCars();
+            this.carsTableAdapter1 = new ReportingXRRichTextFormatSample.dsCarsTableAdapters.CarsTableAdapter();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCars1)).BeginInit();
@@ -59,18 +59,17 @@ namespace RepOverrideRtfFormatting {
             // 
             // xrRichText1
             // 
-            this.xrRichText1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrRichText1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrRichText1.CanShrink = true;
-            this.xrRichText1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Rtf", null, "Cars.RtfContent")});
+            this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "[RtfContent]")});
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 1F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrRichText1.SizeF = new System.Drawing.SizeF(688F, 16F);
             this.xrRichText1.StylePriority.UseBorders = false;
-            this.xrRichText1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrRichText1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrRichText1_BeforePrint);
             // 
             // GroupHeader0
@@ -87,8 +86,8 @@ namespace RepOverrideRtfFormatting {
             // xrLabel1
             // 
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Cars.Model")});
+            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Model]")});
             this.xrLabel1.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(141F, 0F);
             this.xrLabel1.Name = "xrLabel1";
@@ -108,7 +107,7 @@ namespace RepOverrideRtfFormatting {
             // 
             // xrPictureBox4
             // 
-            this.xrPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox4.Image")));
+            this.xrPictureBox4.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox4.ImageSource"));
             this.xrPictureBox4.LocationFloat = new DevExpress.Utils.PointFloat(276F, 8F);
             this.xrPictureBox4.Name = "xrPictureBox4";
             this.xrPictureBox4.NavigateUrl = "http://www.devexpress.com";
@@ -142,7 +141,7 @@ namespace RepOverrideRtfFormatting {
             this.DataMember = "Cars";
             this.DataSource = this.dsCars1;
             this.Margins = new System.Drawing.Printing.Margins(75, 75, 75, 75);
-            this.Version = "11.1";
+            this.Version = "22.1";
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.XtraReport1_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCars1)).EndInit();

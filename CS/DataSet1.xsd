@@ -4,13 +4,13 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="nwindConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="nwindConnectionString (Settings)" PropertyReference="ApplicationSettings.RepOverrideRtfFormatting.Properties.Settings.GlobalReference.Default.nwindConnectionString" Provider="System.Data.OleDb" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CarsDBConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="CarsDBConnectionString (Settings)" PropertyReference="ApplicationSettings.RepOverrideRtfFormatting.Properties.Settings.GlobalReference.Default.CarsDBConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="nwindConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="nwindConnectionString (Settings)" PropertyReference="ApplicationSettings.ReportingXRRichTextFormatSample.Properties.Settings.GlobalReference.Default.nwindConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CarsDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CarsDBConnectionString (Settings)" PropertyReference="ApplicationSettings.ReportingXRRichTextFormatSample.Properties.Settings.GlobalReference.Default.CarsDBConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CarsTableAdapter" GeneratorDataComponentClassName="CarsTableAdapter" Name="Cars" UserDataComponentName="CarsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CarsDBConnectionString (Settings)" DbObjectName="Cars" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CarsDBConnectionString (Settings)" DbObjectName="Cars" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Category, Cyl, Description, HP, Hyperlink, ID, Liter, Model, MPG_City, MPG_Highway, Picture, Price, RtfContent, Trademark, TransmissAutomatic, TransmissSpeedCount FROM Cars WHERE (RtfContent IS NOT NULL)</CommandText>
@@ -47,67 +47,67 @@
   <xs:element name="dsCars" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="dsCars" msprop:Generator_DataSetName="dsCars">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Cars" msprop:Generator_UserTableName="Cars" msprop:Generator_RowDeletedName="CarsRowDeleted" msprop:Generator_RowChangedName="CarsRowChanged" msprop:Generator_RowClassName="CarsRow" msprop:Generator_RowChangingName="CarsRowChanging" msprop:Generator_RowEvArgName="CarsRowChangeEvent" msprop:Generator_RowEvHandlerName="CarsRowChangeEventHandler" msprop:Generator_TableClassName="CarsDataTable" msprop:Generator_TableVarName="tableCars" msprop:Generator_RowDeletingName="CarsRowDeleting" msprop:Generator_TablePropName="Cars">
+        <xs:element name="Cars" msprop:Generator_RowEvHandlerName="CarsRowChangeEventHandler" msprop:Generator_RowDeletedName="CarsRowDeleted" msprop:Generator_RowDeletingName="CarsRowDeleting" msprop:Generator_RowEvArgName="CarsRowChangeEvent" msprop:Generator_RowChangedName="CarsRowChanged" msprop:Generator_TablePropName="Cars" msprop:Generator_UserTableName="Cars" msprop:Generator_RowChangingName="CarsRowChanging" msprop:Generator_RowClassName="CarsRow" msprop:Generator_TableClassName="CarsDataTable" msprop:Generator_TableVarName="tableCars">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Category" msprop:Generator_UserColumnName="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" minOccurs="0">
+              <xs:element name="Category" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_UserColumnName="Category" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cyl" msprop:Generator_UserColumnName="Cyl" msprop:Generator_ColumnVarNameInTable="columnCyl" msprop:Generator_ColumnPropNameInRow="Cyl" msprop:Generator_ColumnPropNameInTable="CylColumn" type="xs:unsignedByte" minOccurs="0" />
-              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" minOccurs="0">
+              <xs:element name="Cyl" msprop:Generator_ColumnPropNameInRow="Cyl" msprop:Generator_ColumnPropNameInTable="CylColumn" msprop:Generator_ColumnVarNameInTable="columnCyl" msprop:Generator_UserColumnName="Cyl" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_UserColumnName="Description" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="536870910" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HP" msprop:Generator_UserColumnName="HP" msprop:Generator_ColumnVarNameInTable="columnHP" msprop:Generator_ColumnPropNameInRow="HP" msprop:Generator_ColumnPropNameInTable="HPColumn" type="xs:short" minOccurs="0" />
-              <xs:element name="Hyperlink" msprop:Generator_UserColumnName="Hyperlink" msprop:Generator_ColumnVarNameInTable="columnHyperlink" msprop:Generator_ColumnPropNameInRow="Hyperlink" msprop:Generator_ColumnPropNameInTable="HyperlinkColumn" minOccurs="0">
+              <xs:element name="HP" msprop:Generator_ColumnPropNameInRow="HP" msprop:Generator_ColumnPropNameInTable="HPColumn" msprop:Generator_ColumnVarNameInTable="columnHP" msprop:Generator_UserColumnName="HP" type="xs:short" minOccurs="0" />
+              <xs:element name="Hyperlink" msprop:Generator_ColumnPropNameInRow="Hyperlink" msprop:Generator_ColumnPropNameInTable="HyperlinkColumn" msprop:Generator_ColumnVarNameInTable="columnHyperlink" msprop:Generator_UserColumnName="Hyperlink" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ID" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="Liter" msprop:Generator_UserColumnName="Liter" msprop:Generator_ColumnVarNameInTable="columnLiter" msprop:Generator_ColumnPropNameInRow="Liter" msprop:Generator_ColumnPropNameInTable="LiterColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="Model" msprop:Generator_UserColumnName="Model" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" minOccurs="0">
+              <xs:element name="ID" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Liter" msprop:Generator_ColumnPropNameInRow="Liter" msprop:Generator_ColumnPropNameInTable="LiterColumn" msprop:Generator_ColumnVarNameInTable="columnLiter" msprop:Generator_UserColumnName="Liter" type="xs:double" minOccurs="0" />
+              <xs:element name="Model" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_UserColumnName="Model" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="MPG_City" msprop:Generator_UserColumnName="MPG_City" msprop:Generator_ColumnVarNameInTable="columnMPG_City" msprop:Generator_ColumnPropNameInRow="MPG_City" msprop:Generator_ColumnPropNameInTable="MPG_CityColumn" type="xs:unsignedByte" minOccurs="0" />
-              <xs:element name="MPG_Highway" msprop:Generator_UserColumnName="MPG_Highway" msprop:Generator_ColumnVarNameInTable="columnMPG_Highway" msprop:Generator_ColumnPropNameInRow="MPG_Highway" msprop:Generator_ColumnPropNameInTable="MPG_HighwayColumn" type="xs:unsignedByte" minOccurs="0" />
-              <xs:element name="Picture" msprop:Generator_UserColumnName="Picture" msprop:Generator_ColumnVarNameInTable="columnPicture" msprop:Generator_ColumnPropNameInRow="Picture" msprop:Generator_ColumnPropNameInTable="PictureColumn" type="xs:base64Binary" minOccurs="0" />
-              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" type="xs:decimal" minOccurs="0" />
-              <xs:element name="RtfContent" msprop:Generator_UserColumnName="RtfContent" msprop:Generator_ColumnVarNameInTable="columnRtfContent" msprop:Generator_ColumnPropNameInRow="RtfContent" msprop:Generator_ColumnPropNameInTable="RtfContentColumn" minOccurs="0">
+              <xs:element name="MPG_City" msprop:Generator_ColumnPropNameInRow="MPG_City" msprop:Generator_ColumnPropNameInTable="MPG_CityColumn" msprop:Generator_ColumnVarNameInTable="columnMPG_City" msprop:Generator_UserColumnName="MPG_City" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="MPG_Highway" msprop:Generator_ColumnPropNameInRow="MPG_Highway" msprop:Generator_ColumnPropNameInTable="MPG_HighwayColumn" msprop:Generator_ColumnVarNameInTable="columnMPG_Highway" msprop:Generator_UserColumnName="MPG_Highway" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Picture" msprop:Generator_ColumnPropNameInRow="Picture" msprop:Generator_ColumnPropNameInTable="PictureColumn" msprop:Generator_ColumnVarNameInTable="columnPicture" msprop:Generator_UserColumnName="Picture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RtfContent" msprop:Generator_ColumnPropNameInRow="RtfContent" msprop:Generator_ColumnPropNameInTable="RtfContentColumn" msprop:Generator_ColumnVarNameInTable="columnRtfContent" msprop:Generator_UserColumnName="RtfContent" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="536870910" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Trademark" msprop:Generator_UserColumnName="Trademark" msprop:Generator_ColumnVarNameInTable="columnTrademark" msprop:Generator_ColumnPropNameInRow="Trademark" msprop:Generator_ColumnPropNameInTable="TrademarkColumn" minOccurs="0">
+              <xs:element name="Trademark" msprop:Generator_ColumnPropNameInRow="Trademark" msprop:Generator_ColumnPropNameInTable="TrademarkColumn" msprop:Generator_ColumnVarNameInTable="columnTrademark" msprop:Generator_UserColumnName="Trademark" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TransmissAutomatic" msprop:Generator_UserColumnName="TransmissAutomatic" msprop:Generator_ColumnVarNameInTable="columnTransmissAutomatic" msprop:Generator_ColumnPropNameInRow="TransmissAutomatic" msprop:Generator_ColumnPropNameInTable="TransmissAutomaticColumn" minOccurs="0">
+              <xs:element name="TransmissAutomatic" msprop:Generator_ColumnPropNameInRow="TransmissAutomatic" msprop:Generator_ColumnPropNameInTable="TransmissAutomaticColumn" msprop:Generator_ColumnVarNameInTable="columnTransmissAutomatic" msprop:Generator_UserColumnName="TransmissAutomatic" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="3" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TransmissSpeedCount" msprop:Generator_UserColumnName="TransmissSpeedCount" msprop:Generator_ColumnVarNameInTable="columnTransmissSpeedCount" msprop:Generator_ColumnPropNameInRow="TransmissSpeedCount" msprop:Generator_ColumnPropNameInTable="TransmissSpeedCountColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="TransmissSpeedCount" msprop:Generator_ColumnPropNameInRow="TransmissSpeedCount" msprop:Generator_ColumnPropNameInTable="TransmissSpeedCountColumn" msprop:Generator_ColumnVarNameInTable="columnTransmissSpeedCount" msprop:Generator_UserColumnName="TransmissSpeedCount" type="xs:unsignedByte" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

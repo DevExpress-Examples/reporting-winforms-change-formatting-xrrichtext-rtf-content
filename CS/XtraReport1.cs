@@ -1,8 +1,9 @@
 using System.Drawing;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraRichEdit;
 using DevExpress.XtraRichEdit.API.Native;
 
-namespace RepOverrideRtfFormatting {
+namespace ReportingXRRichTextFormatSample {
     public partial class XtraReport1 : DevExpress.XtraReports.UI.XtraReport {
         private RichEditDocumentServer richEditDocumentServer;
         public bool OverrideRtfFormatting { get; set; }
@@ -12,13 +13,19 @@ namespace RepOverrideRtfFormatting {
         }
 
        private void XtraReport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {
+            xrRichText1.ExpressionBindings.Clear();
+
             if (OverrideRtfFormatting) {
                 if (richEditDocumentServer == null)
                     richEditDocumentServer = new RichEditDocumentServer();
-                xrRichText1.DataBindings.Clear();
             }
             else
-                xrRichText1.DataBindings.Add("Rtf", null, "Cars.RtfContent");
+                xrRichText1.ExpressionBindings.Add(new ExpressionBinding()
+                {
+                    PropertyName = "Rtf",
+                    Expression = "[RtfContent]",
+                    EventName = "BeforePrint"
+                });
         }
 
         private void xrRichText1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {

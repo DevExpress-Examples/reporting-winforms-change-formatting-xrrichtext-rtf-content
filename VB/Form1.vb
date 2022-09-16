@@ -1,11 +1,11 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Windows.Forms
 Imports DevExpress.XtraReports.UI
 
-Namespace RepOverrideRtfFormatting
+Namespace ReportingXRRichTextFormatSample
 	Partial Public Class Form1
 		Inherits Form
+
 		Private report As New XtraReport1()
 
 		Public Sub New()

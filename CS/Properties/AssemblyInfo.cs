@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RepOverrideRtfFormatting")]
+[assembly: AssemblyTitle("ReportingXRRichTextFormatSample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("My Company")]
-[assembly: AssemblyProduct("RepOverrideRtfFormatting")]
-[assembly: AssemblyCopyright("Copyright © My Company 2008")]
+[assembly: AssemblyProduct("ReportingXRRichTextFormatSample")]
+[assembly: AssemblyCopyright("Copyright © My Company 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

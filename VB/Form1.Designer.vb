@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Namespace RepOverrideRtfFormatting
+﻿Namespace ReportingXRRichTextFormatSample
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -31,35 +29,37 @@ Namespace RepOverrideRtfFormatting
 			' 
 			' button1
 			' 
-			Me.button1.Location = New System.Drawing.Point(50, 50)
+			Me.button1.Location = New System.Drawing.Point(111, 75)
 			Me.button1.Name = "button1"
-			Me.button1.Size = New System.Drawing.Size(99, 23)
+			Me.button1.Size = New System.Drawing.Size(99, 29)
 			Me.button1.TabIndex = 0
 			Me.button1.Text = "Show Report"
 			Me.button1.UseVisualStyleBackColor = True
-'			Me.button1.Click += New System.EventHandler(Me.button1_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.button1.Click += new System.EventHandler(this.button1_Click);
 			' 
 			' checkBox1
 			' 
 			Me.checkBox1.AutoSize = True
 			Me.checkBox1.Checked = True
 			Me.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked
-			Me.checkBox1.Location = New System.Drawing.Point(30, 12)
+			Me.checkBox1.Location = New System.Drawing.Point(116, 28)
 			Me.checkBox1.Name = "checkBox1"
-			Me.checkBox1.Size = New System.Drawing.Size(139, 17)
+			Me.checkBox1.Size = New System.Drawing.Size(88, 17)
 			Me.checkBox1.TabIndex = 1
-			Me.checkBox1.Text = "Override RTF formatting"
+			Me.checkBox1.Text = "Process RTF"
 			Me.checkBox1.UseVisualStyleBackColor = True
 			' 
 			' Form1
 			' 
 			Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
 			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-			Me.ClientSize = New System.Drawing.Size(198, 97)
+			Me.ClientSize = New System.Drawing.Size(321, 129)
 			Me.Controls.Add(Me.checkBox1)
 			Me.Controls.Add(Me.button1)
+			Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
 			Me.Name = "Form1"
-			Me.Text = "Form1"
+			Me.Text = "Modify RTF in XRRichText Control"
 			Me.ResumeLayout(False)
 			Me.PerformLayout()
 
