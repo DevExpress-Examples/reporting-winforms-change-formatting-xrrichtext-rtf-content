@@ -1,21 +1,22 @@
-﻿Imports Microsoft.VisualBasic
 Imports System
 Imports System.Windows.Forms
 Imports DevExpress.XtraReports.UI
 
 Namespace RepOverrideRtfFormatting
-	Partial Public Class Form1
-		Inherits Form
-		Private report As New XtraReport1()
 
-		Public Sub New()
-			InitializeComponent()
-		End Sub
+    Public Partial Class Form1
+        Inherits Form
 
-		Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
-			report.OverrideRtfFormatting = checkBox1.Checked
-			report.CreateDocument()
-			report.ShowPreviewDialog()
-		End Sub
-	End Class
+        Private report As XtraReport1 = New XtraReport1()
+
+        Public Sub New()
+            InitializeComponent()
+        End Sub
+
+        Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs)
+            report.OverrideRtfFormatting = checkBox1.Checked
+            report.CreateDocument()
+            report.ShowPreviewDialog()
+        End Sub
+    End Class
 End Namespace
