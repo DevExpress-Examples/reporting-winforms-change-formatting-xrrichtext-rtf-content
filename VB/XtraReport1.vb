@@ -14,7 +14,7 @@ Namespace ReportingXRRichTextFormatSample
 			InitializeComponent()
 		End Sub
 
-		Private Sub XtraReport1_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles Me.BeforePrint
+		Private Sub XtraReport1_BeforePrint(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.BeforePrint
 			xrRichText1.ExpressionBindings.Clear()
 
 			If OverrideRtfFormatting Then
@@ -31,7 +31,7 @@ Namespace ReportingXRRichTextFormatSample
 
 		End Sub
 
-		Private Sub xrRichText1_BeforePrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles xrRichText1.BeforePrint
+		Private Sub xrRichText1_BeforePrint(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles xrRichText1.BeforePrint
 		   If Not OverrideRtfFormatting Then
 			   Return
 		   End If

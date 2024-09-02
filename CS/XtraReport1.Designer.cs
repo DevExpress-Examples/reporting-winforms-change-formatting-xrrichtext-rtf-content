@@ -70,7 +70,7 @@ namespace ReportingXRRichTextFormatSample {
             this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrRichText1.SizeF = new System.Drawing.SizeF(688F, 16F);
             this.xrRichText1.StylePriority.UseBorders = false;
-            this.xrRichText1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrRichText1_BeforePrint);
+            this.xrRichText1.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.xrRichText1_BeforePrint);
             // 
             // GroupHeader0
             // 
@@ -88,7 +88,7 @@ namespace ReportingXRRichTextFormatSample {
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Model]")});
-            this.xrLabel1.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Tahoma", 14.25F, ((DevExpress.Drawing.DXFontStyle)((DevExpress.Drawing.DXFontStyle.Bold | DevExpress.Drawing.DXFontStyle.Underline))));
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(141F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -140,9 +140,9 @@ namespace ReportingXRRichTextFormatSample {
             this.DataAdapter = this.carsTableAdapter1;
             this.DataMember = "Cars";
             this.DataSource = this.dsCars1;
-            this.Margins = new System.Drawing.Printing.Margins(75, 75, 75, 75);
+            this.Margins = new DevExpress.Drawing.DXMargins(75, 75, 75, 75);
             this.Version = "22.1";
-            this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.XtraReport1_BeforePrint);
+            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.XtraReport1_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCars1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

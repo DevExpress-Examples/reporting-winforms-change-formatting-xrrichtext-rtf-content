@@ -82,7 +82,7 @@ Namespace ReportingXRRichTextFormatSample
             '
             Me.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None
             Me.xrLabel1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Model]")})
-            Me.xrLabel1.Font = New System.Drawing.Font("Tahoma", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle))
+            Me.xrLabel1.Font = New DevExpress.Drawing.DXFont("Tahoma", 14.25!, CType((DevExpress.Drawing.DXFontStyle.Bold Or DevExpress.Drawing.DXFontStyle.Underline), DevExpress.Drawing.DXFontStyle))
             Me.xrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(141.0!, 0!)
             Me.xrLabel1.Name = "xrLabel1"
             Me.xrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -129,7 +129,7 @@ Namespace ReportingXRRichTextFormatSample
             Me.DataAdapter = Me.carsTableAdapter1
             Me.DataMember = "Cars"
             Me.DataSource = Me.dsCars1
-            Me.Margins = New System.Drawing.Printing.Margins(75, 75, 75, 75)
+            Me.Margins = New DevExpress.Drawing.DXMargins(75, 75, 75, 75)
             Me.Version = "22.1"
             CType(Me.xrRichText1, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.dsCars1, System.ComponentModel.ISupportInitialize).EndInit()

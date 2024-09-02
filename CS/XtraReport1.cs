@@ -12,7 +12,7 @@ namespace ReportingXRRichTextFormatSample {
             InitializeComponent();
         }
 
-       private void XtraReport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {
+       private void XtraReport1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e) {
             xrRichText1.ExpressionBindings.Clear();
 
             if (OverrideRtfFormatting) {
@@ -28,7 +28,7 @@ namespace ReportingXRRichTextFormatSample {
                 });
         }
 
-        private void xrRichText1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {
+        private void xrRichText1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e) {
            if (!OverrideRtfFormatting)
                return;
             
